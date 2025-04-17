@@ -1,0 +1,179 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>World of Laptops</title>
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link href="css/theme-style.css" rel='stylesheet' type='text/css' />			
+		<link href="css/jquery-ui.css" rel='stylesheet' type='text/css' />	
+		<!--link href="css/thumbelina.css" rel='stylesheet' type='text/css' /-->
+		<link href="css/xzoom.css" rel='stylesheet' type='text/css' />
+		<link href="css/main.css" rel='stylesheet' type='text/css' />
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<!--link href="css/star.css" rel='stylesheet' type='text/css' /-->			
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>		
+		<!--link rel="shortcut icon" href="images/main.png" class="rounded">
+		<link rel="stylesheet" href="main.css"-->		
+		<style>
+			body{
+				background: gray;
+			}
+			.header{
+				height: 500px;
+			}
+			.bl{
+				border: 1px solid gray;
+				width: 250px;
+				height: 300px;
+				box-shadow: rgb(62 60 60) 0px 0px 10px 0px;
+				/*box-shadow: #03a9f4 0px 0px 10px 0px;*/
+			}
+			.bl img{
+				width: 230px;
+				height: 150px;
+			}
+			#xslider2{
+				margin: 0px auto;
+				padding: 1%;
+			}
+			.xzoom{width: 49%;}	
+			
+			
+		</style>
+		<script src="js/jquery-3.6.0.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<!--script src="js/star.js"></script-->
+		<!--script src="js/thumbelina.js"></script-->
+		<script src="js/xzoom.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.2/medium-zoom.min.js"></script>		
+		<!--script src="js/script.js"></script-->
+				
+		<script>
+		$(function(){
+			$('#qw').hide();
+			$('#main_navbar').hide();
+			$('.main').hide();
+			$('.footer').hide();
+			$('#qw').slideDown(2500);
+			$('#main_navbar').fadeIn(2500);
+			$('.main').fadeIn(2000);
+			$('.footer').fadeIn(2000);
+			$('.bl').hover(function(){
+				$(this).css("box-shadow", "#03a9f4 0px 0px 13px 0px");
+			}, function(){
+				$(this).css("box-shadow", "rgb(62 60 60) 0px 0px 10px 0px");
+			});
+			$(".xzoom").xzoom({tint: '#333', Xoffset: 15});
+			$("#xslider2").width($("#w").width());
+			$(".bl img").mouseenter(function(){
+				var newSrc = $(this).attr("src");
+				$(".xzoom").attr("src",newSrc);
+				var xSrc = $(this).attr("xoriginal");
+				$(".xzoom").attr("xoriginal",xSrc);
+			});			
+		});
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="container-fluid">
+				<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="main_navbar">
+				  <div class="container-fluid">
+					<a class="navbar-brand pt-3" href="index.html">World of Laptops</a>
+					<button
+					  class="navbar-toggler"
+					  type="button"
+					  data-bs-toggle="collapse"
+					  data-bs-target="#navbarSupportedContent"
+					  aria-controls="navbarSupportedContent"
+					  aria-expanded="false"
+					  aria-label="Toggle navigation"
+					>
+					  <span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+						  <a class="nav-link active" aria-current="page" href="index.html">Головна</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="q&a.html"> Q&A </a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="laptops.html"> Ноутбуки </a>
+						</li>						
+						<li class="nav-item">
+						  <a class="nav-link" href="koshyk.html"> Кошик </a>
+						</li>						
+						<li class="nav-item">
+						  <a class="nav-link" href="contact.html"> Контакти </a>
+						</li>
+					  </ul>
+					</div>
+				  </div>
+				</nav>				
+			</div>
+			<div id="qw" class="container text-center text-light mt-5">
+				<h1 class="mt-5">World of Laptops</h1>
+				Світ, де ви зможете купити любий хороший ноутбук<br>
+				<a class="btn btn-lg btn-outline-dark mt-2" href="laptops.html">Перейти</a>
+			</div>	
+				
+			 
+		</div>
+		<div class="main mr-2">
+			<div class="container-fluid mr-4 bg-light" id="ma">
+				<h1 class="text-center"> Ноутбуки</h1>
+				<div class="container-fluid" id="w">
+					<div class="bl my-3 mx-1 col-md-4">
+						<img src="images/laptop1.jpg" xoriginal="images/laptop1.png" />
+						<h5 class="mt-1">Ноутбук Vinga Spirit S141 Black</h5>						
+						<p class="text-success mt-1">9 799 грн</p>
+						<a class="btn btn-outline-primary mt-1" href="laptops.html">Більше</a>
+					</div>
+					<div class="bl my-3 mx-1 col-md-4">
+						<img src="images/laptop5.jpg" xoriginal="images/laptop5.jpg" />
+						<h5 class="mt-1">Ноутбук Acer Swift 1 Pure Silver</h5>						
+						<p class="text-success mt-1">14 999 грн</p>
+						<a class="btn btn-outline-primary mt-1" href="laptops.html">Більше</a>						
+					</div>
+					<div class="bl my-3 mx-1 col-md-4">
+						<img src="images/laptop2.jpg" xoriginal="images/laptop2.jpg" />
+						<h5 class="mt-1">Ноутбук YEPO 737J12 PRO (12/512)</h5>
+						<p class="text-success mt-1">15 499 грн</p>
+						<a class="btn btn-outline-primary mt-1" href="laptops.html">Більше</a>						
+					</div>
+					<div class="bl my-3 mx-1 col-md-4">
+						<img src="images/laptop3.jpg" xoriginal="images/laptop3.jpg" />
+						<h5 class="mt-1">Ноутбук ASUS Laptop Slate Grey 14" IPS</h5>
+						<p class="text-success mt-1">16 499 грн</p>
+						<a class="btn btn-outline-primary mt-1" href="laptops.html">Більше</a>						
+					</div>
+					<div class="bl my-3 mx-1 col-md-4">
+						<img src="images/laptop4.jpg" xoriginal="images/laptop4.jpg" />
+						<h5 class="mt-1">Ноутбук Lenovo IdeaPad 3 Arctic Grey</h5>
+						<p class="text-success mt-1">12 999 грн</p>
+						<a class="btn btn-outline-primary mt-1" href="laptops.html">Більше</a>						
+					</div>					
+				</div>
+				<div class="container-fluid mt-2">
+					<div id="xslider2" style="width: 743.562px;">
+					<img class="xzoom" src="images/laptop1.jpg" xoriginal="images/laptop1.png" style="width: 357.203px;" />
+					<!--p class="char">Характеристика</p-->
+					</div>					
+				</div>
+
+
+			</div>
+		</div>
+		<div class="footer" style="background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;">
+			<div class="container-fluid mr-2 mt-4 bg-dark text-white py-4">
+				<p class="text-center">©World of Laptops 2022 | Всі права застережено</p>
+			</div>
+		</div>		
+	</body>
+</html>

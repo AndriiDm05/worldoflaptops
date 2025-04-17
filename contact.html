@@ -1,0 +1,126 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>World of Laptops</title>
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link href="css/theme-style.css" rel='stylesheet' type='text/css' />			
+		<link href="css/jquery-ui.css" rel='stylesheet' type='text/css' />		
+		<link href="css/thumbelina.css" rel='stylesheet' type='text/css' />
+		<link href="css/xzoom.css" rel='stylesheet' type='text/css' />
+		<link href="css/main.css" rel='stylesheet' type='text/css' />
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>		
+		<!--link rel="shortcut icon" href="images/main.png" class="rounded">
+		<link rel="stylesheet" href="main.css"-->		
+		<style>
+			body{
+				background: gray;
+			}
+			.header{
+				height: auto;
+			}
+			#selectable .ui-selecting { background: #FECA40; }
+			#selectable .ui-selected { background: #F39814; color: white; }
+			#selectable { list-style-type: none; margin: 0px auto; padding: 0; width: 30%; }			
+		</style>
+		<script src="js/jquery-3.6.0.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/thumbelina.js"></script>
+		<script src="js/xzoom.js"></script>
+		<script src="js/script.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>		
+		<script>
+		$(function(){
+			$('#main_navbar').hide();
+			$('.main').hide();
+			$('.footer').hide();
+			$('#main_navbar').fadeIn(2500);
+			$('.main').fadeIn(2000);
+			$('.footer').fadeIn(2000);
+			$("#selectable").selectable();
+			$("#my_button").button();
+			$("#my_button").click(function(event){
+				event.preventDefault();					
+			});			
+		});
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="container-fluid">
+				<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="main_navbar">
+				  <div class="container-fluid">
+					<a class="navbar-brand pt-3" href="index.html">World of Laptops</a>
+					<button
+					  class="navbar-toggler"
+					  type="button"
+					  data-bs-toggle="collapse"
+					  data-bs-target="#navbarSupportedContent"
+					  aria-controls="navbarSupportedContent"
+					  aria-expanded="false"
+					  aria-label="Toggle navigation"
+					>
+					  <span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+						  <a class="nav-link" href="index.html">Головна</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="q&a.html"> Q&A </a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="laptops.html"> Ноутбуки </a>
+						</li>						
+						<li class="nav-item">
+						  <a class="nav-link" href="koshyk.html"> Кошик </a>
+						</li>					
+						<li class="nav-item">
+						  <a class="nav-link active" aria-current="page" href="contact.html"> Контакти </a>
+						</li>
+					  </ul>
+					</div>
+				  </div>
+				</nav>				
+			</div>
+		</div>
+		<div class="main mr-2">
+			<div class="container bg-light">
+				<h1 class="text-center my-2"> Зв'яжіться з нами </h1>
+				<form>
+					<div class="text-center">
+						<label for="fname">Ім'я: </label><br>
+						<input type="text" id="fname" name="fname"><br>
+						<label for="lname">Прізвище: </label><br>
+						<input type="text" id="lname" name="lname"><br>
+						<label for="email">Ваш email:</label><br>
+						<input type="email" id="email" name="email" placeholder="abcd@example.com"><br>
+						<label class="mt-2">Оберіть тип відгуку</label><br>
+						<ol id="selectable">
+						  <li class="ui-widget-content">Порада</li>
+						  <li class="ui-widget-content">Скарга</li>
+						  <li class="ui-widget-content">Подяка</li>
+						  <li class="ui-widget-content">Співпраця</li>
+						  <li class="ui-widget-content">Проблема</li>						  
+						</ol><br>						
+						<label for="text">Поле для тексту</label><br>
+						<input type="text" style="width: 520px; padding-bottom: 130px;"><br>
+						<input type="submit" value="Відправити запит" id="my_button" class="mr-2 my-2"/>
+						<input type="reset" value="Скинути">
+	
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container-fluid mr-2 mt-4 bg-dark text-white py-4">
+				<p class="text-center">©World of Laptops 2022 | Всі права застережено</p>
+			</div>
+		</div>		
+	</body>
+</html>
